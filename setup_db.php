@@ -8,3 +8,4 @@ require_once './dbConnect.php';
         email VARCHAR(30),
         date DATE)";
     $conn->exec($create_sql);
+    echo 'OK';
