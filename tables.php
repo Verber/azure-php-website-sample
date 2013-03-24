@@ -78,5 +78,6 @@
         echo '<h2>No upcoming TODOs</h2>';
     }
 ?>
+strange text here
 </body>
 </html>
