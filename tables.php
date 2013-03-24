@@ -1,4 +1,6 @@
 <?php
+ini_set('display_erros', 1);
+error_reporting(E_ALL);
 require_once('vendor\autoload.php');
 
 use WindowsAzure\Common\ServicesBuilder;
