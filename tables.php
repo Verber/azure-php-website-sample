@@ -75,10 +75,6 @@
     } else {
         echo '<h2>No upcoming TODOs</h2>';
     }
-
-    foreach($entities as $entity){
-        echo $entity->getPartitionKey().":".$entity->getRowKey()."<br />";
-    }
 ?>
 </body>
 </html>
