@@ -50,24 +50,35 @@
         echo "<h3>Job added!</h3>";
     }
     // Retrieve data
-    /*$sql_select = "SELECT * FROM registration_tbl";
-    $stmt = $conn->query($sql_select);
-    $registrants = $stmt->fetchAll(); 
-    if(count($registrants) > 0) {
-        echo "<h2>People who are registered:</h2>";
+    $filter = "Due ge '" . date('Y-m-d') . "'";
+
+    try {
+        $result = $tableRestProxy->queryEntities("todos", $filter);
+    } catch(ServiceException $e){
+        $code = $e->getCode();
+        $error_message = $e->getMessage();
+        echo $code.": ".$error_message."<br />";
+    }
+
+    $entities = $result->getEntities();
+
+    if(count($entities) > 0) {
+        echo "<h2>Upccoming TODOs:</h2>";
         echo "<table>";
-        echo "<tr><th>Name</th>";
-        echo "<th>Email</th>";
-        echo "<th>Date</th></tr>";
-        foreach($registrants as $registrant) {
-            echo "<tr><td>".$registrant['name']."</td>";
-            echo "<td>".$registrant['email']."</td>";
-            echo "<td>".$registrant['date']."</td></tr>";
+        echo "<tr><th>Job</th>";
+        echo "<th>Due</th></tr>";
+        foreach($entities as $entity) {
+            echo "<tr><td>".$entity->getProperty('Job')."</td>";
+            echo "<td>".$entity->getProperty('Due')."</td></tr>";
         }
         echo "</table>";
     } else {
-        echo "<h3>No one is currently registered.</h3>";
-    }*/
+        echo '<h2>No upcoming TODOs</h2>';
+    }
+
+    foreach($entities as $entity){
+        echo $entity->getPartitionKey().":".$entity->getRowKey()."<br />";
+    }
 ?>
 </body>
 </html>
