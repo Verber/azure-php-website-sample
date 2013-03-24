@@ -28,6 +28,7 @@
 
     use WindowsAzure\Table\Models\Entity;
     use WindowsAzure\Table\Models\EdmType;
+    use WindowsAzure\Table\Models\Filters\Filter;
 
 
     // Insert registration info
@@ -53,8 +54,12 @@
     }
 
     // Retrieve data
+    $currentDate = new DateTime();
+    $filter = new Filter();
+    $filter->applyGe('Due', $currentDate);
+
     try {
-        $result = $tableRestProxy->queryEntities("todos");
+        $result = $tableRestProxy->queryEntities("todos", $filter);
     } catch(Exception $e){
         $code = $e->getCode();
         $error_message = $e->getMessage();
@@ -64,7 +69,7 @@
     $entities = $result->getEntities();
 
     if(count($entities) > 0) {
-        echo "<h2>Upccoming TODOs:</h2>";
+        echo "<h2>Upcoming TODOs:</h2>";
         echo "<table>";
         echo "<tr><th>Job</th>";
         echo "<th>Due</th></tr>";
