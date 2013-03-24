@@ -70,7 +70,7 @@
         echo "<tr><th>Job</th>";
         echo "<th>Due</th></tr>";
         foreach($entities as $entity) {
-            var_dump($entity);
+            var_dump($entity->getProperties());
             echo "<tr><td>".$entity->getProperty('Job')."</td>";
             echo "<td>".$entity->getProperty('Due')."</td></tr>";
         }
