@@ -55,8 +55,7 @@
 
     // Retrieve data
     $currentDate = new DateTime();
-    $filter = new Filter();
-    $filter->applyGe('Due', $currentDate->format('Y-m-d\TH:i:s\Z'));
+    $filter = "Due ge datetime'" . $currentDate->format('Y-m-d\TH:i:s\Z')) . "'";
 
     try {
         $result = $tableRestProxy->queryEntities("todos", $filter);
