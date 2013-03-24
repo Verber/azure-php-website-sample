@@ -51,6 +51,8 @@
         }
         echo "<h3>Job added!</h3>";
     }
+
+    var_dump($tableRestProxy->queryTables());
     // Retrieve data
     $filter = "Due ge '" . date('Y-m-d') . "'";
 
