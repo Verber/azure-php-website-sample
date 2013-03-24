@@ -52,16 +52,15 @@
         echo "<h3>Job added!</h3>";
     }
     // Retrieve data
-    //$filter = "Due ge '" . date('Y-m-d') . "'";
+    $filter = "Due ge '" . date('Y-m-d') . "'";
 
     try {
-        $result = $tableRestProxy->queryEntities("todos");//, $filter);
+        $result = $tableRestProxy->queryEntities("todos", $filter);
     } catch(Exception $e){
         $code = $e->getCode();
         $error_message = $e->getMessage();
         echo $code.": ".$error_message."<br />";
     }
-die('here');
 
     $entities = $result->getEntities();
 
