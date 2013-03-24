@@ -70,8 +70,8 @@
         echo "<tr><th>Job</th>";
         echo "<th>Due</th></tr>";
         foreach($entities as $entity) {
-            echo "<tr><td>".$entity->getProperty('Job')->getValue()."</td>";
-            echo "<td>".$entity->getProperty('Due')->getValue()."</td></tr>";
+            echo "<tr><td>".$entity->getPropertyValue('Job')."</td>";
+            echo "<td>".$entity->getPropertyValue('Due')."</td></tr>";
         }
         echo "</table>";
 
