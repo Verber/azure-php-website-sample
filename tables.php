@@ -1,14 +1,12 @@
 <?php
-ini_set('display_erros', 1);
-error_reporting(E_ALL);
-require_once('vendor\autoload.php');
+require_once('vendor/autoload.php');
 
 use WindowsAzure\Common\ServicesBuilder;
 use WindowsAzure\Common\ServiceException;
 
 $connectionString = 'DefaultEndpointsProtocol=http;'
-    . 'AccountName=testcloudserv;'
-    . 'AccountKey=qYJ/3rKiHR3HIuLwOrUDvqKcK5O8F7Td4pgiPep1pBOVz4DpKR+mlyzpJA7gQ9JJc1QC7Z43lVq0DmtXCCHstg==';
+    . 'AccountName=phpaz1storage;'
+    . 'AccountKey=nSsL1qPY62PDpeRV2qEAokllKpBRdz8OTkoGt424howtFg/1MdG3slxmsvPwBCOvMcTSu9B/baX6Izy8cikV2A==';
 $tableRestProxy = ServicesBuilder::getInstance()->createTableService($connectionString);
 
 try {
