@@ -10,9 +10,12 @@ $connectionString = 'DefaultEndpointsProtocol=http;'
 $tableRestProxy = ServicesBuilder::getInstance()->createTableService($connectionString);
 
 try {
-    // Create table.
-    $tableRestProxy->createTable("testtable");
-    echo 'Table created';
+    // Create table if not exist
+    $existingTables = $tableRestProxy->queryTables("TableName eq 'testtable'");
+    if (count($existingTables) == 0) {
+        $tableRestProxy->createTable("testtable");
+        echo 'Table created';
+    }
 }
 catch(ServiceException $e){
     $code = $e->getCode();
