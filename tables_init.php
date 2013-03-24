@@ -11,7 +11,12 @@ $tableRestProxy = ServicesBuilder::getInstance()->createTableService($connection
 
 try {
     // Create table if not exist
-    $tableRestProxy->createTable("todos");
+    $existingTables = $tableRestProxy->queryTables("TableName eq 'todos'");
+    var_dump($existingTables);
+    if (count($existingTables) == 0) {
+        $tableRestProxy->createTable("todos");
+        echo 'Table created';
+    }
 }
 catch(ServiceException $e){
     $code = $e->getCode();

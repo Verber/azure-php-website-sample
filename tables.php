@@ -64,8 +64,10 @@
     }
 
     $entities = $result->getEntities();
+var_dump($entities);
 
     if(count($entities) > 0) {
+
         echo "<h2>Upccoming TODOs:</h2>";
         echo "<table>";
         echo "<tr><th>Job</th>";
