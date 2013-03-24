@@ -71,7 +71,7 @@
         echo "<th>Due</th></tr>";
         foreach($entities as $entity) {
             echo "<tr><td>".$entity->getPropertyValue('Job')."</td>";
-            echo "<td>".$entity->getPropertyValue('Due')."</td></tr>";
+            echo "<td>".$entity->getPropertyValue('Due')->format('Y-m-d')."</td></tr>";
         }
         echo "</table>";
 
