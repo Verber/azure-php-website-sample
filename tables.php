@@ -53,7 +53,7 @@
     }
     // Retrieve data
     //$filter = "Due ge '" . date('Y-m-d') . "'";
-    die('here');
+
     try {
         $result = $tableRestProxy->queryEntities("todos");//, $filter);
     } catch(ServiceException $e){
@@ -61,6 +61,7 @@
         $error_message = $e->getMessage();
         echo $code.": ".$error_message."<br />";
     }
+die('here');
 
     $entities = $result->getEntities();
 
