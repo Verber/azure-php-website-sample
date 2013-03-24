@@ -44,7 +44,7 @@
         try {
             $tableRestProxy->insertEntity("todos", $entity);
         }
-        catch(ServiceException $e) {
+        catch(Exception $e) {
             $code = $e->getCode();
             $error_message = $e->getMessage();
             echo $code.": ".$error_message."<br />";
