@@ -11,16 +11,11 @@ $tableRestProxy = ServicesBuilder::getInstance()->createTableService($connection
 
 try {
     // Create table if not exist
-    $existingTables = $tableRestProxy->queryTables("TableName eq 'todos'");
-    if (count($existingTables) == 0) {
-        $tableRestProxy->createTable("todos");
-        echo 'Table created';
-    }
+    $tableRestProxy->createTable("todos");
 }
 catch(ServiceException $e){
     $code = $e->getCode();
     $error_message = $e->getMessage();
-    echo $error_message;
     // Handle exception based on error codes and messages.
     // Error codes and messages can be found here:
     // http://msdn.microsoft.com/en-us/library/windowsazure/dd179438.aspx
