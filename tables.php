@@ -62,8 +62,7 @@
     }
 
     $entities = $result->getEntities();
-var_dump($entities);
-    try {
+
     if(count($entities) > 0) {
 
         echo "<h2>Upccoming TODOs:</h2>";
@@ -71,6 +70,7 @@ var_dump($entities);
         echo "<tr><th>Job</th>";
         echo "<th>Due</th></tr>";
         foreach($entities as $entity) {
+            var_dump($entity);
             echo "<tr><td>".$entity->getProperty('Job')."</td>";
             echo "<td>".$entity->getProperty('Due')."</td></tr>";
         }
@@ -79,11 +79,6 @@ var_dump($entities);
     } else {
         echo '<h2>No upcoming TODOs</h2>';
     }
-    } catch(Exception $e){
-               $code = $e->getCode();
-               $error_message = $e->getMessage();
-               echo $code.": ".$error_message."<br />";
-           }
 ?>
 </body>
 </html>
