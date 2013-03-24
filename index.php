@@ -1,3 +1,4 @@
+<?php require_once('./vendor/autoload.php'); ?>
 <html>
 <head>
 <Title>Registration Form</Title>
