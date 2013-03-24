@@ -33,7 +33,7 @@
     // Insert registration info
     if(!empty($_POST)) {
         $job = $_POST['job'];
-        $dueDate = new DateTime(strtotime($_POST['due']));
+        $dueDate = new DateTime($_POST['due']);
 
         $entity = new Entity();
         $entity->setPartitionKey("todoAzure");
