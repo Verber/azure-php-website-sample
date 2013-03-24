@@ -99,6 +99,7 @@ return array(
     'PEAR_Validate' => $baseDir . '/vendor/pear-pear.php.net/PEAR/PEAR/Validate.php',
     'PEAR_Validator_PECL' => $baseDir . '/vendor/pear-pear.php.net/PEAR/PEAR/Validator/PECL.php',
     'PEAR_XMLParser' => $baseDir . '/vendor/pear-pear.php.net/PEAR/PEAR/XMLParser.php',
+    'SessionHandlerInterface' => $baseDir . '/vendor/symfony/http-foundation/Symfony/Component/HttpFoundation/Resources/stubs/SessionHandlerInterface.php',
     'Structures_Graph' => $baseDir . '/vendor/pear-pear.php.net/Structures_Graph/Structures/Graph.php',
     'Structures_Graph_Manipulator_AcyclicTest' => $baseDir . '/vendor/pear-pear.php.net/Structures_Graph/Structures/Graph/Manipulator/AcyclicTest.php',
     'Structures_Graph_Manipulator_TopologicalSorter' => $baseDir . '/vendor/pear-pear.php.net/Structures_Graph/Structures/Graph/Manipulator/TopologicalSorter.php',
