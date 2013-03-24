@@ -13,7 +13,7 @@ try {
     // Create table if not exist
     $existingTables = $tableRestProxy->queryTables("TableName eq 'testtable'");
     if (count($existingTables) == 0) {
-        $tableRestProxy->createTable("testtable");
+        $tableRestProxy->createTable("todos");
         echo 'Table created';
     }
 }
