@@ -23,7 +23,6 @@
       Due date <input type="text" name="due" id="due"/></br>
       <input type="submit" name="submit" value="Submit" />
 </form>
-strange text here
 <?php
     require_once './tables_init.php';
 
@@ -54,7 +53,7 @@ strange text here
     }
     // Retrieve data
     //$filter = "Due ge '" . date('Y-m-d') . "'";
-
+    die('here');
     try {
         $result = $tableRestProxy->queryEntities("todos");//, $filter);
     } catch(ServiceException $e){
