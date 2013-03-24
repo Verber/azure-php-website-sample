@@ -53,7 +53,7 @@
     }
 
     // Retrieve data
-    $filter = "Due ge '" . date('Y-m-d') . "'";
+    $filter = "Due ge '" . new DateTime('now') . "'";
 
     try {
         $result = $tableRestProxy->queryEntities("todos", $filter);
