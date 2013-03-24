@@ -44,16 +44,18 @@
         try {
             $tableRestProxy->insertEntity("todos", $entity);
         }
-        catch(Exception $e) {
-            die(var_dump($e));
+        catch(ServiceException $e) {
+            $code = $e->getCode();
+            $error_message = $e->getMessage();
+            echo $code.": ".$error_message."<br />";
         }
         echo "<h3>Job added!</h3>";
     }
     // Retrieve data
-    $filter = "Due ge '" . date('Y-m-d') . "'";
+    //$filter = "Due ge '" . date('Y-m-d') . "'";
 
     try {
-        $result = $tableRestProxy->queryEntities("todos", $filter);
+        $result = $tableRestProxy->queryEntities("todos");//, $filter);
     } catch(ServiceException $e){
         $code = $e->getCode();
         $error_message = $e->getMessage();
