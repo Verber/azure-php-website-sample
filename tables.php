@@ -53,10 +53,8 @@
     }
 
     // Retrieve data
-    $filter = "Due ge '" . new DateTime('now') . "'";
-
     try {
-        $result = $tableRestProxy->queryEntities("todos", $filter);
+        $result = $tableRestProxy->queryEntities("todos");
     } catch(Exception $e){
         $code = $e->getCode();
         $error_message = $e->getMessage();
