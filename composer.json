@@ -1,6 +1,7 @@
 {
     "require": {
-        "microsoft/windowsazure": "*"
+        "microsoft/windowsazure": "*",
+        "silex/silex": "1.0.*@dev"
     },
     "repositories": [
         {
