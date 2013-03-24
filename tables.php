@@ -56,7 +56,7 @@
     $filter = null;//"Due ge '" . date('Y-m-d') . "'";
 
     try {
-        $result = $tableRestProxy->queryEntities("todos", $filter);
+        $result = $tableRestProxy->queryEntities("todos");//, $filter);
     } catch(Exception $e){
         $code = $e->getCode();
         $error_message = $e->getMessage();
