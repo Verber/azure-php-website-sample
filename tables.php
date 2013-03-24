@@ -63,7 +63,7 @@
 
     $entities = $result->getEntities();
 var_dump($entities);
-
+    try {
     if(count($entities) > 0) {
 
         echo "<h2>Upccoming TODOs:</h2>";
@@ -75,9 +75,15 @@ var_dump($entities);
             echo "<td>".$entity->getProperty('Due')."</td></tr>";
         }
         echo "</table>";
+
     } else {
         echo '<h2>No upcoming TODOs</h2>';
     }
+    } catch(Exception $e){
+               $code = $e->getCode();
+               $error_message = $e->getMessage();
+               echo $code.": ".$error_message."<br />";
+           }
 ?>
 </body>
 </html>
