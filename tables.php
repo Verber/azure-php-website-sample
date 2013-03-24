@@ -17,6 +17,7 @@ try {
 catch(ServiceException $e){
     $code = $e->getCode();
     $error_message = $e->getMessage();
+    echo $error_message;
     // Handle exception based on error codes and messages.
     // Error codes and messages can be found here:
     // http://msdn.microsoft.com/en-us/library/windowsazure/dd179438.aspx
