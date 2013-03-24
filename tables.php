@@ -23,6 +23,7 @@
       Due date <input type="text" name="due" id="due"/></br>
       <input type="submit" name="submit" value="Submit" />
 </form>
+strange text here
 <?php
     require_once './tables_init.php';
 
@@ -78,6 +79,5 @@
         echo '<h2>No upcoming TODOs</h2>';
     }
 ?>
-strange text here
 </body>
 </html>
