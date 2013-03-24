@@ -18,7 +18,7 @@
 <body>
 <h1>Add todo item</h1>
 <p>Add job and press <strong>Submit</strong> to save.</p>
-<form method="post" action="index.php" enctype="multipart/form-data" >
+<form method="post" action="tables.php" enctype="multipart/form-data" >
       Job  <input type="text" name="job" id="job"/></br>
       Due date <input type="text" name="due" id="due"/></br>
       <input type="submit" name="submit" value="Submit" />
