@@ -56,7 +56,7 @@ class Blobs {
         if (is_uploaded_file($image->getPathname())) {
             $blobOptions = new CreateBlobOptions();
             $blobOptions->setContentType($image->getClientMimeType());
-            $blobOptions->setMetadata($title);
+            $blobOptions->setMetadata(array('title' => $title));
             $res = fopen($image->getPathname(), 'r');
             $this->blobStorage->createBlockBlob(
                 'gallery2',

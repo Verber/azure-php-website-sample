@@ -28,7 +28,8 @@
     <?php foreach ($blobs as $blob): ?>
         <li>
             <a href="<?php echo $blob->getUrl(); ?>" alt="<?php echo $blob->getName(); ?>">
-                <?php echo $blob->getMetadata(); ?>
+                <?php $meta = $blob->getMetadata();
+                echo $meta['title']?>
             </a>
         </li>
     <?php endforeach; ?>
