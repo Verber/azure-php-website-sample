@@ -47,6 +47,7 @@ class MySQL {
         $sql_select = "SELECT * FROM registration_tbl";
         $stmt = $this->connection->query($sql_select);
         $view['registrants'] = $stmt->fetchAll();
+        return $view->render('MySQL/index.php');
     }
 
     public function register(Request $request, Application $app)
