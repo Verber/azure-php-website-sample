@@ -7,7 +7,7 @@ $app = new Silex\Application();
 $app->get('/blobs/', 'Demos\Blobs::index');
 $app->post('/blobs/upload', 'Demos\Blobs::upload');
 
-$app->get('/info/', phpinfo());
+$app->get('/info/', function() { phpinfo(); });
 $app['debug'] = true;
 
 $app->run();
