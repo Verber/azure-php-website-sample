@@ -15,6 +15,11 @@ class View implements \ArrayAccess
 
     private $data;
 
+    public function __construct()
+    {
+        $this->data = array();
+    }
+
     public function render($pageFile, $data=array())
     {
         $pageFilePath = is_file($pageFile) ?

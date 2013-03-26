@@ -1,6 +1,5 @@
 <?php
 include_once('vendor/autoload.php');
-ini_set('display_errors', 1);
 
 $app = new Silex\Application();
 
@@ -15,11 +14,7 @@ $app->post('/tables/save', 'Demos\Tables::save');
 
 
 $app->get('/info/', function() { phpinfo(); });
-
-$app->get('/', function() {
-    $view = new Demos\View();
-    $view->render('index.php');
-});
+$app->get('/', 'Demos\Dashboard::index');
 
 $app['debug'] = true;
 
