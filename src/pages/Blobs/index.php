@@ -23,7 +23,6 @@
       Image <input type="file" name="image" accept="image/*" capture></br>
       <input type="submit" name="upload" value="Upload" />
 </form>
-<?php var_dump($blobs); ?>
 <?php if (isset($blobs) && count($blobs)): ?>
 <ul>
     <?php foreach ($blobs as $blob): ?>
