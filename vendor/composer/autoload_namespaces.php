@@ -14,4 +14,5 @@ return array(
     'Silex' => $vendorDir . '/silex/silex/src/',
     'Psr\\Log\\' => $vendorDir . '/psr/log/',
     'Pimple' => $vendorDir . '/pimple/pimple/lib/',
+    'Demos' => $baseDir . '/src/',
 );

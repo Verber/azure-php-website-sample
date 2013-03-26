@@ -1,10 +1,15 @@
 <?php
 include_once('vendor/autoload.php');
+ini_set('display_errors', 1);
 
-$app = new Silex\Application();
+try {
+    $app = new Silex\Application();
 
-$app->get('/hello/{name}', function ($name) use ($app) {
-    return 'Hello '.$app->escape($name);
-});
+    $app->get('/blobs/', 'Demos\Blobs::index');
+    $app->post('/blobs/upload', 'Demos\Blobs::upload');
+    $app['debug'] = true;
 
-$app->run();
+    $app->run();
+} catch (Exception $e) {
+    die($e->getMessage());
+}
