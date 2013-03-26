@@ -14,6 +14,10 @@ $app->post('/mysql/register', 'Demos\MySQL::register');
 $app->get('/tables/', 'Demos\Tables::index');
 $app->post('/tables/save', 'Demos\Tables::save');
 
+$app->get('/queues/', 'Demos\Queues::index');
+$app->post('/queues/add', 'Demos\Queues::add');
+$app->post('/queues/list', 'Demos\Queues::dequeue');
+
 
 $app->get('/info/', function() { phpinfo(); });
 $app->get('/', 'Demos\Dashboard::index');
