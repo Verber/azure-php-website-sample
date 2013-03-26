@@ -27,7 +27,11 @@
 <?php if (isset($blobs) && count($blobs)): ?>
 <ul>
     <?php foreach ($blobs as $blob): ?>
-        <li><?php echo $blob->getName().": ".$blob->getUrl(); ?></li>
+        <li>
+            <a href="<?php echo $blob->getUrl(); ?>" alt="<?php echo $blob->getName(); ?>">
+                <?php echo $blob->getMetadata(); ?>
+            </a>
+        </li>
     <?php endforeach; ?>
 </ul>
 <?php else: ?>

@@ -4,6 +4,8 @@ namespace Demos;
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use WindowsAzure\Blob\Models\CreateBlobBlockOptions;
+use WindowsAzure\Blob\Models\CreateBlobOptions;
 use WindowsAzure\Blob\Models\CreateContainerOptions;
 use WindowsAzure\Blob\Models\ListContainersOptions;
 use WindowsAzure\Blob\Models\PublicAccessType;
@@ -52,11 +54,15 @@ class Blobs {
         $title = $request->get('title');
         $image = $request->files->get('image');
         if (is_uploaded_file($image->getPathname())) {
+            $blobOptions = new CreateBlobOptions();
+            $blobOptions->setContentType($image->getClientMimeType());
+            $blobOptions->setMetadata($title);
             $res = fopen($image->getPathname(), 'r');
             $this->blobStorage->createBlockBlob(
                 'gallery2',
                 $image->getClientOriginalName(),
-                $res
+                $res,
+                $blobOptions
             );
         }
         return $app->redirect('/silex.php/blobs/');
