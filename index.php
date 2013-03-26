@@ -15,6 +15,12 @@ $app->post('/tables/save', 'Demos\Tables::save');
 
 
 $app->get('/info/', function() { phpinfo(); });
+
+$app->get('/', function() {
+    $view = new Demos\View();
+    $view->render('index.php');
+});
+
 $app['debug'] = true;
 
 $app->run();

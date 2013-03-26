@@ -1,6 +1,6 @@
 <html>
 <head>
-<Title>Todo Items</Title>
+<Title>Blobs gallery</Title>
 <style type="text/css">
     body { background-color: #fff; border-top: solid 10px #000;
         color: #333; font-size: .85em; margin: 20; padding: 20;
