@@ -9,6 +9,8 @@
 
 namespace Demos;
 
+use Silex\Application;
+use Symfony\Component\HttpFoundation\Request;
 
 class MySQL {
 
@@ -24,7 +26,7 @@ class MySQL {
         $pwd = "a9f91b2a";
         $db = "phpaz1MySQL";
         $this->connection = new \PDO( "mysql:host=$host;dbname=$db", $user, $pwd);
-        $this->connection->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+        $this->connection->setAttribute( \PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION );
         $this->init();
     }
 
