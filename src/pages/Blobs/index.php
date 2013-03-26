@@ -29,7 +29,7 @@
         <li>
             <a href="<?php echo $blob->getUrl(); ?>" alt="<?php echo $blob->getName(); ?>">
                 <?php $meta = $blob->getMetadata();
-                echo $meta['title']?>
+                var_dump($meta); ?>
             </a>
         </li>
     <?php endforeach; ?>
