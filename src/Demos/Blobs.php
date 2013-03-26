@@ -58,7 +58,7 @@ class Blobs {
             $res = fopen($image->getPathname(), 'r');
             $this->blobStorage->createBlockBlob(
                 'gallery2',
-                $image->getClientOriginalName(),
+                urlencode($image->getClientOriginalName()),
                 $res,
                 $blobOptions
             );
@@ -68,7 +68,7 @@ class Blobs {
 
     public function delete(Request $request, Application $app)
     {
-        $this->blobStorage->deleteBlob('gallery2', $request->get('name'));
+        $this->blobStorage->deleteBlob('gallery2', urlencode($request->get('name')));
         return $app->redirect('/index.php/blobs/');
     }
 }

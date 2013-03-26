@@ -13,6 +13,9 @@
     table { margin-top: 0.75em; }
     th { font-size: 1.2em; text-align: left; border: none; padding-left: 0; }
     td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
+    ul {list-style-image: none;}
+    ul li {float: left; display: block; position: relative;}
+    ul li a {position: absolute; top: 0; right: 0; color: red; background-color: black;}
 </style>
 </head>
 <body>
@@ -26,10 +29,10 @@
 <ul>
     <?php foreach ($blobs as $blob): ?>
         <li>
-            <a href="<?php echo $blob->getUrl(); ?>" alt="<?php echo $blob->getName(); ?>">
-                <?php echo $blob->getName(); ?>
-            </a> |
-            <a href="/index.php/blobs/delete/<?php echo $blob->getName(); ?>">[x]</a>
+            <img src="<?php echo $blob->getUrl(); ?>"
+                 alt="<?php echo $blob->getName(); ?>"
+                 title="<?php echo $blob->getName(); ?>" />
+            <a href="/index.php/blobs/delete/<?php echo urlencode($blob->getName()); ?>" title="Delete">[x]</a>
         </li>
     <?php endforeach; ?>
 </ul>
