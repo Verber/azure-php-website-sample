@@ -10,6 +10,9 @@ $app->post('/blobs/upload', 'Demos\Blobs::upload');
 $app->get('/mysql/', 'Demos\MySQL::index');
 $app->post('/mysql/register', 'Demos\MySQL::register');
 
+$app->get('/tables/', 'Demos\Tables::index');
+$app->post('/tables/save', 'Demos\Tables::save');
+
 
 $app->get('/info/', function() { phpinfo(); });
 $app['debug'] = true;
