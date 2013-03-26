@@ -5,6 +5,8 @@ $app = new Silex\Application();
 
 $app->get('/blobs/', 'Demos\Blobs::index');
 $app->post('/blobs/upload', 'Demos\Blobs::upload');
+$app->post('/blobs/delete/{name}', 'Demos\Blobs::delete')
+    ->assert('name', '\w+');
 
 $app->get('/mysql/', 'Demos\MySQL::index');
 $app->post('/mysql/register', 'Demos\MySQL::register');

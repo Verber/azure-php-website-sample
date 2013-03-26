@@ -28,7 +28,8 @@
         <li>
             <a href="<?php echo $blob->getUrl(); ?>" alt="<?php echo $blob->getName(); ?>">
                 <?php echo $blob->getName(); ?>
-            </a>
+            </a> |
+            <a href="/index.php/blobs/delete/<?php echo $blob->getName(); ?>">[x]</a>
         </li>
     <?php endforeach; ?>
 </ul>

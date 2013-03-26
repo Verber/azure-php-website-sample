@@ -65,4 +65,9 @@ class Blobs {
         }
         return $app->redirect('/index.php/blobs/');
     }
+
+    public function delete(Request $request, Application $app)
+    {
+        $blob = $this->blobStorage->deleteBlob('gallery2', $request->get('name'));
+    }
 }
