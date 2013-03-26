@@ -25,7 +25,7 @@
 </form>
 <?php if (isset($entities) && count($entities)): ?>
 <h2>Upcoming TODOs:</h2>
-<table>";
+<table>
     <tr>
         <th>Job</th>
         <th>Due</th>
