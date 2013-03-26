@@ -18,7 +18,7 @@
 <body>
 <h1>Add image</h1>
 <p>Add image and press <strong>Upload</strong> to save.</p>
-<form method="post" action="/silex.php/blobs/upload" enctype="multipart/form-data" >
+<form method="post" action="/index.php/blobs/upload" enctype="multipart/form-data" >
       Image <input type="file" name="image" accept="image/*" capture></br>
       <input type="submit" name="upload" value="Upload" />
 </form>

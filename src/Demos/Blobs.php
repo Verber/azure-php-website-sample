@@ -63,6 +63,6 @@ class Blobs {
                 $blobOptions
             );
         }
-        return $app->redirect('/silex.php/blobs/');
+        return $app->redirect('/index.php/blobs/');
     }
 }

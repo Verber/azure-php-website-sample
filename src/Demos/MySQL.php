@@ -64,7 +64,7 @@ class MySQL {
         $stmt->bindValue(3, $date);
         $stmt->execute();
 
-        return $app->redirect('/silex.php/mysql/');
+        return $app->redirect('/index.php/mysql/');
     }
 
 }
