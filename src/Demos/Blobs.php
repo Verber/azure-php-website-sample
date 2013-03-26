@@ -51,12 +51,10 @@ class Blobs {
 
     public function upload(Request $request, Application $app)
     {
-        $title = $request->get('title');
         $image = $request->files->get('image');
         if (is_uploaded_file($image->getPathname())) {
             $blobOptions = new CreateBlobOptions();
             $blobOptions->setContentType($image->getClientMimeType());
-            $blobOptions->setMetadata(array('title' => $title));
             $res = fopen($image->getPathname(), 'r');
             $this->blobStorage->createBlockBlob(
                 'gallery2',
