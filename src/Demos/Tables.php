@@ -14,7 +14,7 @@ use WindowsAzure\Common\ServiceException;
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
 use WindowsAzure\Table\Models\EdmType;
-
+use WindowsAzure\Table\Models\Entity;
 
 class Tables {
 
@@ -45,7 +45,7 @@ class Tables {
     {
         $view = new View();
         // Retrieve data
-        $currentDate = new DateTime();
+        $currentDate = new \DateTime();
         //for datetime we need set type explicitly
         $filter = "Due ge datetime'" . $currentDate->format('Y-m-d\TH:i:s\Z') . "'";
         $view['entities'] = $this->tableProxy->queryEntities("todos", $filter)->getEntities();
@@ -55,7 +55,7 @@ class Tables {
     public function save(Request $request, Application $app)
     {
         $job = $request->get('job');
-        $dueDate = new DateTime($request->get('due'));
+        $dueDate = new \DateTime($request->get('due'));
 
         $entity = new Entity();
         $entity->setPartitionKey("todoAzure");
