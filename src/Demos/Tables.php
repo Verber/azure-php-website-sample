@@ -35,7 +35,7 @@ class Tables {
 
     private function initTable()
     {
-        $existingTables = $this->tableProxy->queryTables('todos');
+        $existingTables = $this->tableProxy->queryTables('todos')->getTables();
         if (count($existingTables) == 0) {
             $this->tableProxy->createTable("todos");
         }
