@@ -56,11 +56,13 @@ class Tables {
     {
         $job = $request->get('job');
         $dueDate = new \DateTime($request->get('due'));
+        $tag = $request->get('tag');
 
         $entity = new Entity();
         $entity->setPartitionKey("todoAzure");
         $entity->setRowKey(uniqid('job'));
         $entity->addProperty("Job", EdmType::STRING, $job);
+        $entity->addProperty("Tag", EdmType::STRING, $tag);
         $entity->addProperty("Due", EdmType::DATETIME, $dueDate);
         $this->tableProxy->insertEntity("todos", $entity);
 

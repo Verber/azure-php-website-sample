@@ -20,6 +20,7 @@
 <p>Add job and press <strong>Submit</strong> to save.</p>
 <form method="post" action="/index.php/tables/save" enctype="multipart/form-data" >
     Job  <input type="text" name="job" id="job"/></br>
+    Nag <input type="text" name="tag" id="tag"/></br>
     Due date <input type="text" name="due" id="due"/></br>
     <input type="submit" name="submit" value="Submit" />
 </form>
