@@ -33,7 +33,9 @@
     <?php foreach ($entities as $entity): ?>
     <tr>
         <td><?php echo $entity->getPropertyValue('Job'); ?></td>
-        <td><?php echo $entity->getPropertyValue('Due')->format('Y-m-d'); ?></td>
+        <td><?php $dt = $entity->getPropertyValue('Due');
+            $dt->setTimezone('America/Buenos_Aires');
+            echo $dt->format('Y-m-d H:i:s'); ?></td>
     </tr>
     <?php endforeach; ?>
 </table>
