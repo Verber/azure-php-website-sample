@@ -47,7 +47,8 @@ class Tables {
         // Retrieve data
         $currentDate = new \DateTime();
         //for datetime we need set type explicitly
-        $filter = "Due ge datetime'" . $currentDate->format('Y-m-d\TH:i:s\Z') . "'";
+        $filter = "Due ge datetime'" . $currentDate->format('Y-m-d\TH:i:s\Z') . "'
+        and Tag eq '".$request->get('tag')."'";
         $view['entities'] = $this->tableProxy->queryEntities("todos", $filter)->getEntities();
         return $view->render('Tables/index.php');
     }

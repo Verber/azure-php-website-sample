@@ -13,7 +13,8 @@ $app->get('/blobs/delete/{name}', 'Demos\Blobs::delete')
 $app->get('/mysql/', 'Demos\MySQL::index');
 $app->post('/mysql/register', 'Demos\MySQL::register');
 
-$app->get('/tables/', 'Demos\Tables::index');
+$app->get('/tables/{tag}', 'Demos\Tables::index')
+    ->value('tag', '');
 $app->post('/tables/save', 'Demos\Tables::save');
 
 $app->get('/queues/', 'Demos\Queues::index');
