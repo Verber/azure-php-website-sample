@@ -1,10 +1,9 @@
 <?php
 include_once('vendor/autoload.php');
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
+//ini_set('display_errors', 1);
+//error_reporting(E_ALL);
 
 $app = new Silex\Application();
-die(here);
 
 $app->get('/blobs/', 'Demos\Blobs::index');
 $app->post('/blobs/upload', 'Demos\Blobs::upload');
