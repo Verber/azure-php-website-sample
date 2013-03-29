@@ -20,7 +20,6 @@
 <p>Add job and press <strong>Submit</strong> to save.</p>
 <form method="post" action="/index.php/tables/save" enctype="multipart/form-data" >
     Job  <input type="text" name="job" id="job"/></br>
-    Tag <input type="text" name="tag" id="tag"/></br>
     Due date <input type="text" name="due" id="due"/></br>
     <input type="submit" name="submit" value="Submit" />
 </form>
@@ -35,10 +34,7 @@
     <?php foreach ($entities as $entity): ?>
     <tr>
         <td><?php echo $entity->getPropertyValue('Job'); ?></td>
-        <td><?php echo $entity->getPropertyValue('Tag'); ?></td>
-        <td><?php $dt = $entity->getPropertyValue('Due');
-            $dt->setTimezone('America/Buenos_Aires');
-            echo $dt->format('Y-m-d H:i:s'); ?></td>
+        <td><?php $dt = $entity->getPropertyValue('Due')->format('Y-m-d H:i:s'); ?></td>
     </tr>
     <?php endforeach; ?>
 </table>

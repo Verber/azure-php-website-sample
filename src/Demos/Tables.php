@@ -47,8 +47,7 @@ class Tables {
         // Retrieve data
         $currentDate = new \DateTime();
         //for datetime we need set type explicitly
-        $filter = "Due ge datetime'" . $currentDate->format('Y-m-d\TH:i:s\Z') . "'
-        and Tag eq '".$request->get('tag')."'";
+        $filter = "Due ge datetime'" . $currentDate->format('Y-m-d\TH:i:s\Z') . "'";
         $view['entities'] = $this->tableProxy->queryEntities("todos", $filter)->getEntities();
         return $view->render('Tables/index.php');
     }
@@ -63,7 +62,6 @@ class Tables {
         $entity->setPartitionKey("todoAzure");
         $entity->setRowKey(uniqid('job'));
         $entity->addProperty("Job", EdmType::STRING, $job);
-        $entity->addProperty("Tag", EdmType::STRING, $tag);
         $entity->addProperty("Due", EdmType::DATETIME, $dueDate);
         $this->tableProxy->insertEntity("todos", $entity);
 

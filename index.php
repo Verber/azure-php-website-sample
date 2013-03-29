@@ -1,7 +1,5 @@
 <?php
 include_once('vendor/autoload.php');
-//ini_set('display_errors', 1);
-//error_reporting(E_ALL);
 
 $app = new Silex\Application();
 
@@ -13,8 +11,7 @@ $app->get('/blobs/delete/{name}', 'Demos\Blobs::delete')
 $app->get('/mysql/', 'Demos\MySQL::index');
 $app->post('/mysql/register', 'Demos\MySQL::register');
 
-$app->get('/tables/{tag}/', 'Demos\Tables::index')
-    ->value('tag', '');
+$app->get('/tables/', 'Demos\Tables::index');
 $app->post('/tables/save', 'Demos\Tables::save');
 
 $app->get('/queues/', 'Demos\Queues::index');
