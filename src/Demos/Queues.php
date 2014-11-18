@@ -27,9 +27,7 @@ class Queues {
 
     public function __construct()
     {
-        $connectionString = 'DefaultEndpointsProtocol=http;'
-                    . 'AccountName=phpaz1storage;'
-                    . 'AccountKey=nSsL1qPY62PDpeRV2qEAokllKpBRdz8OTkoGt424howtFg/1MdG3slxmsvPwBCOvMcTSu9B/baX6Izy8cikV2A==';
+        $connectionString = isset($_SERVER['CUSTOMCONNSTR_STORAGE'])?$_SERVER['CUSTOMCONNSTR_STORAGE']:getenv('CUSTOMCONNSTR_STORAGE');
         $this->queueProxy = ServicesBuilder::getInstance()->createQueueService($connectionString);
 
         $this->init();
