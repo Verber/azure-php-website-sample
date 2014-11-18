@@ -21,9 +21,7 @@ class Blobs {
 
     public function __construct()
     {
-        $connectionString = 'DefaultEndpointsProtocol=http;'
-            . 'AccountName=phpaz1storage;'
-            . 'AccountKey=nSsL1qPY62PDpeRV2qEAokllKpBRdz8OTkoGt424howtFg/1MdG3slxmsvPwBCOvMcTSu9B/baX6Izy8cikV2A==';
+        $connectionString = getenv('BLOB_CONNECTION_STRING');
         $this->blobStorage = ServicesBuilder::getInstance()->createBlobService($connectionString);
 
         $this->initContainer();
