@@ -21,10 +21,10 @@ class MySQL {
 
     public function __construct()
     {
-        $host = "eu-cdbr-azure-north-a.cloudapp.net";
-        $user = "b5a0d39aaf6422";
-        $pwd = "a9f91b2a";
-        $db = "phpaz1MySQL";
+        $host = isset($_SERVER['CUSTOMCONNSTR_MYSQL_HOST'])?$_SERVER['CUSTOMCONNSTR_MYSQL_HOST']:getenv('CUSTOMCONNSTR_MYSQL_HOST');
+        $user = isset($_SERVER['CUSTOMCONNSTR_MYSQL_USER'])?$_SERVER['CUSTOMCONNSTR_MYSQL_USER']:getenv('CUSTOMCONNSTR_MYSQL_USER');
+        $pwd = isset($_SERVER['CUSTOMCONNSTR_MYSQL_PWD'])?$_SERVER['CUSTOMCONNSTR_MYSQL_PWD']:getenv('CUSTOMCONNSTR_MYSQL_PWD');
+        $db = isset($_SERVER['CUSTOMCONNSTR_MYSQL_DB'])?$_SERVER['CUSTOMCONNSTR_MYSQL_DB']:getenv('CUSTOMCONNSTR_MYSQL_DB');;
         $this->connection = new \PDO( "mysql:host=$host;dbname=$db", $user, $pwd);
         $this->connection->setAttribute( \PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION );
         $this->init();
