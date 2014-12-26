@@ -1,33 +1,37 @@
 {
-    "hash": "a3a6187d1404f7ef8a6a5d00563dc2fe",
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "5cde14da10b73a06a47b16be03e9109d",
     "packages": [
         {
             "name": "microsoft/windowsazure",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/WindowsAzure/azure-sdk-for-php.git",
-                "reference": "d8daa05ad1852e0c70a85d15a6db88f7e3b23405"
+                "url": "https://github.com/Azure/azure-sdk-for-php.git",
+                "reference": "9a8af0b4054cf1c40645565e3d80b80f58af996d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WindowsAzure/azure-sdk-for-php/zipball/d8daa05ad1852e0c70a85d15a6db88f7e3b23405",
-                "reference": "d8daa05ad1852e0c70a85d15a6db88f7e3b23405",
+                "url": "https://api.github.com/repos/Azure/azure-sdk-for-php/zipball/9a8af0b4054cf1c40645565e3d80b80f58af996d",
+                "reference": "9a8af0b4054cf1c40645565e3d80b80f58af996d",
                 "shasum": ""
             },
             "require": {
-                "pear-pear/http_request2": "*",
-                "pear-pear/mail_mime": "*",
-                "pear-pear/mail_mimedecode": "*"
+                "pear-pear.php.net/http_request2": "*",
+                "pear-pear.php.net/mail_mime": "*",
+                "pear-pear.php.net/mail_mimedecode": "*"
             },
-            "time": "1355787702",
             "type": "library",
-            "installation-source": "source",
             "autoload": {
                 "psr-0": {
                     "WindowsAzure\\": ""
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache-2.0"
             ],
@@ -39,17 +43,18 @@
             ],
             "description": "This project provides a set of PHP client libraries that make it easy to access Windows Azure tables, blobs, queues, service runtime and service management APIs.",
             "keywords": [
+                "azure",
                 "php",
-                "sdk",
-                "azure"
-            ]
+                "sdk"
+            ],
+            "time": "2014-10-07 06:27:57"
         },
         {
             "name": "pear-pear.php.net/Archive_Tar",
-            "version": "1.3.11",
+            "version": "1.3.13",
             "dist": {
                 "type": "file",
-                "url": "http://pear.php.net/get/Archive_Tar-1.3.11.tgz",
+                "url": "http://pear.php.net/get/Archive_Tar-1.3.13.tgz",
                 "reference": null,
                 "shasum": null
             },
@@ -57,10 +62,9 @@
                 "php": ">=4.3.0.0"
             },
             "replace": {
-                "pear-pear/archive_tar": "== 1.3.11.0"
+                "pear-pear/archive_tar": "== 1.3.13.0"
             },
             "type": "pear-library",
-            "installation-source": "dist",
             "autoload": {
                 "classmap": [
                     ""
@@ -87,7 +91,6 @@
                 "pear-pear/console_getopt": "== 1.3.1.0"
             },
             "type": "pear-library",
-            "installation-source": "dist",
             "autoload": {
                 "classmap": [
                     ""
@@ -100,23 +103,22 @@
         },
         {
             "name": "pear-pear.php.net/HTTP_Request2",
-            "version": "2.1.1",
+            "version": "2.2.1",
             "dist": {
                 "type": "file",
-                "url": "http://pear.php.net/get/HTTP_Request2-2.1.1.tgz",
+                "url": "http://pear.php.net/get/HTTP_Request2-2.2.1.tgz",
                 "reference": null,
                 "shasum": null
             },
             "require": {
-                "php": ">=5.2.0.0",
                 "pear-pear.php.net/net_url2": ">=2.0.0.0",
-                "pear-pear.php.net/pear": ">=1.9.2.0"
+                "pear-pear.php.net/pear": ">=1.9.2.0",
+                "php": ">=5.2.0.0"
             },
             "replace": {
-                "pear-pear/http_request2": "== 2.1.1.0"
+                "pear-pear/http_request2": "== 2.2.1.0"
             },
             "type": "pear-library",
-            "installation-source": "dist",
             "autoload": {
                 "classmap": [
                     ""
@@ -129,10 +131,10 @@
         },
         {
             "name": "pear-pear.php.net/Mail_Mime",
-            "version": "1.8.7",
+            "version": "1.8.9",
             "dist": {
                 "type": "file",
-                "url": "http://pear.php.net/get/Mail_Mime-1.8.7.tgz",
+                "url": "http://pear.php.net/get/Mail_Mime-1.8.9.tgz",
                 "reference": null,
                 "shasum": null
             },
@@ -140,10 +142,9 @@
                 "php": ">=4.3.0.0"
             },
             "replace": {
-                "pear-pear/mail_mime": "== 1.8.7.0"
+                "pear-pear/mail_mime": "== 1.8.9.0"
             },
             "type": "pear-library",
-            "installation-source": "dist",
             "autoload": {
                 "classmap": [
                     ""
@@ -164,14 +165,13 @@
                 "shasum": null
             },
             "require": {
-                "php": ">=4.3.0.0",
-                "pear-pear.php.net/mail_mime": ">1.4.0.0"
+                "pear-pear.php.net/mail_mime": ">1.4.0.0",
+                "php": ">=4.3.0.0"
             },
             "replace": {
                 "pear-pear/mail_mimedecode": "== 1.5.5.0"
             },
             "type": "pear-library",
-            "installation-source": "dist",
             "autoload": {
                 "classmap": [
                     ""
@@ -184,21 +184,20 @@
         },
         {
             "name": "pear-pear.php.net/Net_URL2",
-            "version": "2.0.0",
+            "version": "2.1.0",
             "dist": {
                 "type": "file",
-                "url": "http://pear.php.net/get/Net_URL2-2.0.0.tgz",
+                "url": "http://pear.php.net/get/Net_URL2-2.1.0.tgz",
                 "reference": null,
                 "shasum": null
             },
             "require": {
-                "php": ">=5.0.0.0"
+                "php": ">=5.1.4.0"
             },
             "replace": {
-                "pear-pear/net_url2": "== 2.0.0.0"
+                "pear-pear/net_url2": "== 2.1.0.0"
             },
             "type": "pear-library",
-            "installation-source": "dist",
             "autoload": {
                 "classmap": [
                     ""
@@ -207,35 +206,34 @@
             "include-path": [
                 "/"
             ],
-            "description": "Provides parsing of URLs into their constituent parts (scheme, host, path etc.), URL generation, and resolving of relative URLs."
+            "description": "Provides parsing of URLs into their constituent parts (scheme, host, path etc.), URL generation, and resolving of\n    relative URLs."
         },
         {
             "name": "pear-pear.php.net/PEAR",
-            "version": "1.9.4",
+            "version": "1.9.5",
             "dist": {
                 "type": "file",
-                "url": "http://pear.php.net/get/PEAR-1.9.4.tgz",
+                "url": "http://pear.php.net/get/PEAR-1.9.5.tgz",
                 "reference": null,
                 "shasum": null
             },
             "require": {
-                "php": ">=4.4.0.0,!=5.0.0.0,!=5.1.0.0,!=5.1.1.0,!=5.1.2.0,!=5.1.3.0,!=5.1.4.0,!=5.1.5.0",
-                "pear-pear.php.net/archive_tar": ">=1.3.7.0",
-                "pear-pear.php.net/structures_graph": ">=1.0.2.0",
-                "pear-pear.php.net/console_getopt": ">=1.2.0.0",
-                "pear-pear.php.net/xml_util": ">=1.2.0.0",
+                "ext-pcre": "*",
                 "ext-xml": "*",
-                "ext-pcre": "*"
+                "pear-pear.php.net/archive_tar": ">=1.3.11.0",
+                "pear-pear.php.net/console_getopt": ">=1.2.0.0",
+                "pear-pear.php.net/structures_graph": ">=1.0.2.0",
+                "pear-pear.php.net/xml_util": ">=1.2.0.0",
+                "php": ">=4.4.0.0,!=5.0.0.0,!=5.1.0.0,!=5.1.1.0,!=5.1.2.0,!=5.1.3.0,!=5.1.4.0,!=5.1.5.0"
             },
             "conflict": {
-                "pear-pear.php.net/pear_frontend_web": "<=0.4.0.0",
-                "pear-pear.php.net/pear_frontend_gtk": "<0.4.0.0"
+                "pear-pear.php.net/pear_frontend_gtk": "<0.4.0.0",
+                "pear-pear.php.net/pear_frontend_web": "<=0.4.0.0"
             },
             "replace": {
-                "pear-pear/pear": "== 1.9.4.0"
+                "pear-pear/pear": "== 1.9.5.0"
             },
             "type": "pear-library",
-            "installation-source": "dist",
             "autoload": {
                 "classmap": [
                     ""
@@ -262,7 +260,6 @@
                 "pear-pear/structures_graph": "== 1.0.4.0"
             },
             "type": "pear-library",
-            "installation-source": "dist",
             "autoload": {
                 "classmap": [
                     ""
@@ -275,22 +272,21 @@
         },
         {
             "name": "pear-pear.php.net/XML_Util",
-            "version": "1.2.1",
+            "version": "1.2.3",
             "dist": {
                 "type": "file",
-                "url": "http://pear.php.net/get/XML_Util-1.2.1.tgz",
+                "url": "http://pear.php.net/get/XML_Util-1.2.3.tgz",
                 "reference": null,
                 "shasum": null
             },
             "require": {
-                "php": ">=4.3.0.0",
-                "ext-pcre": "*"
+                "ext-pcre": "*",
+                "php": ">=4.3.0.0"
             },
             "replace": {
-                "pear-pear/xml_util": "== 1.2.1.0"
+                "pear-pear/xml_util": "== 1.2.3.0"
             },
             "type": "pear-library",
-            "installation-source": "dist",
             "autoload": {
                 "classmap": [
                     ""
@@ -303,34 +299,33 @@
         },
         {
             "name": "pimple/pimple",
-            "version": "dev-master",
+            "version": "1.1.x-dev",
             "source": {
                 "type": "git",
-                "url": "https://github.com/fabpot/Pimple.git",
-                "reference": "v1.0.2"
+                "url": "https://github.com/silexphp/Pimple.git",
+                "reference": "bc2fc12cdf1f29bcad9e650d493a54a8fd1f3d85"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Pimple/zipball/v1.0.2",
-                "reference": "v1.0.2",
+                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/bc2fc12cdf1f29bcad9e650d493a54a8fd1f3d85",
+                "reference": "bc2fc12cdf1f29bcad9e650d493a54a8fd1f3d85",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
             },
-            "time": "1362730900",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.1.x-dev"
                 }
             },
-            "installation-source": "source",
             "autoload": {
                 "psr-0": {
                     "Pimple": "lib/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -343,32 +338,37 @@
             "description": "Pimple is a simple Dependency Injection Container for PHP 5.3",
             "homepage": "http://pimple.sensiolabs.org",
             "keywords": [
-                "dependency injection",
-                "container"
-            ]
+                "container",
+                "dependency injection"
+            ],
+            "time": "2014-04-20 07:24:09"
         },
         {
             "name": "psr/log",
-            "version": "1.0.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/php-fig/log",
-                "reference": "1.0.0"
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "a78d6504ff5d4367497785ab2ade91db3a9fbe11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/php-fig/log/archive/1.0.0.zip",
-                "reference": "1.0.0",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/a78d6504ff5d4367497785ab2ade91db3a9fbe11",
+                "reference": "a78d6504ff5d4367497785ab2ade91db3a9fbe11",
                 "shasum": ""
             },
-            "time": "2012-12-21 11:40:51",
             "type": "library",
-            "installation-source": "dist",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
             "autoload": {
                 "psr-0": {
                     "Psr\\Log\\": ""
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -383,69 +383,71 @@
                 "log",
                 "psr",
                 "psr-3"
-            ]
+            ],
+            "time": "2014-01-18 15:33:09"
         },
         {
             "name": "silex/silex",
-            "version": "dev-master",
+            "version": "1.2.x-dev",
             "source": {
                 "type": "git",
-                "url": "https://github.com/fabpot/Silex.git",
-                "reference": "59e7dbd338b5caba9879ae11524da4a5905f80c1"
+                "url": "https://github.com/silexphp/Silex.git",
+                "reference": "f64ac7b8c859a9f4df572c0cd0e4348097475002"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Silex/zipball/59e7dbd338b5caba9879ae11524da4a5905f80c1",
-                "reference": "59e7dbd338b5caba9879ae11524da4a5905f80c1",
+                "url": "https://api.github.com/repos/silexphp/Silex/zipball/f64ac7b8c859a9f4df572c0cd0e4348097475002",
+                "reference": "f64ac7b8c859a9f4df572c0cd0e4348097475002",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3",
-                "pimple/pimple": "1.*",
-                "symfony/event-dispatcher": ">=2.1,<2.3-dev",
-                "symfony/http-foundation": ">=2.1,<2.3-dev",
-                "symfony/http-kernel": ">=2.1,<2.3-dev",
-                "symfony/routing": ">=2.1,<2.3-dev"
+                "pimple/pimple": "~1.0",
+                "symfony/event-dispatcher": "~2.3",
+                "symfony/http-foundation": "~2.3",
+                "symfony/http-kernel": "~2.3",
+                "symfony/routing": "~2.3"
             },
             "require-dev": {
-                "twig/twig": ">=1.8.0,<2.0-dev",
-                "swiftmailer/swiftmailer": "4.2.*",
-                "doctrine/dbal": ">=2.2.0,<2.4.0-dev",
-                "symfony/security": ">=2.1,<2.3-dev",
-                "symfony/config": ">=2.1,<2.3-dev",
-                "symfony/locale": ">=2.1,<2.3-dev",
-                "symfony/browser-kit": ">=2.1,<2.3-dev",
-                "symfony/css-selector": ">=2.1,<2.3-dev",
-                "symfony/finder": ">=2.1,<2.3-dev",
-                "symfony/monolog-bridge": ">=2.1,<2.3-dev",
-                "symfony/process": ">=2.1,<2.3-dev",
-                "symfony/translation": ">=2.1,<2.3-dev",
-                "symfony/twig-bridge": ">=2.1,<2.3-dev",
-                "symfony/validator": ">=2.1,<2.3-dev",
-                "symfony/serializer": ">=2.1,<2.3-dev",
-                "symfony/dom-crawler": ">=2.1,<2.3-dev",
-                "symfony/options-resolver": ">=2.1,<2.3-dev",
-                "symfony/form": ">=2.1.4,<2.3-dev"
+                "doctrine/dbal": "~2.2",
+                "monolog/monolog": "~1.4,>=1.4.1",
+                "swiftmailer/swiftmailer": "5.*",
+                "symfony/browser-kit": "~2.3",
+                "symfony/config": "~2.3",
+                "symfony/css-selector": "~2.3",
+                "symfony/debug": "~2.3",
+                "symfony/dom-crawler": "~2.3",
+                "symfony/finder": "~2.3",
+                "symfony/form": "~2.3",
+                "symfony/locale": "~2.3",
+                "symfony/monolog-bridge": "~2.3",
+                "symfony/options-resolver": "~2.3",
+                "symfony/process": "~2.3",
+                "symfony/security": "~2.3",
+                "symfony/serializer": "~2.3",
+                "symfony/translation": "~2.3",
+                "symfony/twig-bridge": "~2.3",
+                "symfony/validator": "~2.3",
+                "twig/twig": ">=1.8.0,<2.0-dev"
             },
             "suggest": {
-                "symfony/browser-kit": ">=2.1,<2.3-dev",
-                "symfony/css-selector": ">=2.1,<2.3-dev",
-                "symfony/dom-crawler": ">=2.1,<2.3-dev",
-                "symfony/form": "To make use of the FormServiceProvider, >= 2.1.4 is required"
+                "symfony/browser-kit": "~2.3",
+                "symfony/css-selector": "~2.3",
+                "symfony/dom-crawler": "~2.3",
+                "symfony/form": "~2.3"
             },
-            "time": "1362761812",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.2.x-dev"
                 }
             },
-            "installation-source": "source",
             "autoload": {
                 "psr-0": {
                     "Silex": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -456,96 +458,157 @@
                 },
                 {
                     "name": "Igor Wiedler",
-                    "email": "igor@wiedler.ch",
-                    "homepage": "http://wiedler.ch/igor/"
+                    "email": "igor@wiedler.ch"
                 }
             ],
             "description": "The PHP micro-framework based on the Symfony2 Components",
             "homepage": "http://silex.sensiolabs.org",
             "keywords": [
                 "microframework"
-            ]
+            ],
+            "time": "2014-12-16 14:03:38"
+        },
+        {
+            "name": "symfony/debug",
+            "version": "2.7.x-dev",
+            "target-dir": "Symfony/Component/Debug",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Debug.git",
+                "reference": "daa33041ff13487f5f656f0ea9453ca9e6504f2d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Debug/zipball/daa33041ff13487f5f656f0ea9453ca9e6504f2d",
+                "reference": "daa33041ff13487f5f656f0ea9453ca9e6504f2d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "psr/log": "~1.0"
+            },
+            "require-dev": {
+                "symfony/http-foundation": "~2.1",
+                "symfony/http-kernel": "~2.2"
+            },
+            "suggest": {
+                "symfony/http-foundation": "",
+                "symfony/http-kernel": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Debug\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony Debug Component",
+            "homepage": "http://symfony.com",
+            "time": "2014-12-22 16:45:18"
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "2.2.x-dev",
+            "version": "2.7.x-dev",
             "target-dir": "Symfony/Component/EventDispatcher",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/EventDispatcher.git",
-                "reference": "v2.2.0-RC3"
+                "reference": "b27ae60d9bf9b4768b3a6f155a4309f2cd991845"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/v2.2.0-RC3",
-                "reference": "v2.2.0-RC3",
+                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/b27ae60d9bf9b4768b3a6f155a4309f2cd991845",
+                "reference": "b27ae60d9bf9b4768b3a6f155a4309f2cd991845",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
             "require-dev": {
-                "symfony/dependency-injection": ">=2.0,<3.0"
+                "psr/log": "~1.0",
+                "symfony/config": "~2.0,>=2.0.5",
+                "symfony/dependency-injection": "~2.6",
+                "symfony/expression-language": "~2.6",
+                "symfony/stopwatch": "~2.3"
             },
             "suggest": {
-                "symfony/dependency-injection": "2.2.*",
-                "symfony/http-kernel": "2.2.*"
+                "symfony/dependency-injection": "",
+                "symfony/http-kernel": ""
             },
-            "time": "1360582003",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "2.7-dev"
                 }
             },
-            "installation-source": "source",
             "autoload": {
                 "psr-0": {
                     "Symfony\\Component\\EventDispatcher\\": ""
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "authors": [
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
                     "name": "Symfony Community",
                     "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "Symfony EventDispatcher Component",
-            "homepage": "http://symfony.com"
+            "homepage": "http://symfony.com",
+            "time": "2014-12-22 16:45:18"
         },
         {
             "name": "symfony/http-foundation",
-            "version": "2.2.x-dev",
+            "version": "2.7.x-dev",
             "target-dir": "Symfony/Component/HttpFoundation",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpFoundation.git",
-                "reference": "6af424d4fee81987e76bc76aa4e811859ca70bac"
+                "reference": "e5489e2a1f5ae2b52b8f6b48688d7d1d8f28cfe2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/6af424d4fee81987e76bc76aa4e811859ca70bac",
-                "reference": "6af424d4fee81987e76bc76aa4e811859ca70bac",
+                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/e5489e2a1f5ae2b52b8f6b48688d7d1d8f28cfe2",
+                "reference": "e5489e2a1f5ae2b52b8f6b48688d7d1d8f28cfe2",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
-            "time": "1364024994",
+            "require-dev": {
+                "symfony/expression-language": "~2.4"
+            },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "2.7-dev"
                 }
             },
-            "installation-source": "source",
             "autoload": {
                 "psr-0": {
                     "Symfony\\Component\\HttpFoundation\\": ""
@@ -554,156 +617,176 @@
                     "Symfony/Component/HttpFoundation/Resources/stubs"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "authors": [
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
                     "name": "Symfony Community",
                     "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "Symfony HttpFoundation Component",
-            "homepage": "http://symfony.com"
+            "homepage": "http://symfony.com",
+            "time": "2014-12-26 10:31:34"
         },
         {
             "name": "symfony/http-kernel",
-            "version": "2.2.x-dev",
+            "version": "2.7.x-dev",
             "target-dir": "Symfony/Component/HttpKernel",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpKernel.git",
-                "reference": "3bfc8fda577fb671b2d9395a59fbc87f449fa61f"
+                "reference": "21a23c2763049e60ec2f13882ec578b8f618f9c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpKernel/zipball/3bfc8fda577fb671b2d9395a59fbc87f449fa61f",
-                "reference": "3bfc8fda577fb671b2d9395a59fbc87f449fa61f",
+                "url": "https://api.github.com/repos/symfony/HttpKernel/zipball/21a23c2763049e60ec2f13882ec578b8f618f9c4",
+                "reference": "21a23c2763049e60ec2f13882ec578b8f618f9c4",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3",
-                "psr/log": ">=1.0,<2.0",
-                "symfony/event-dispatcher": ">=2.1,<3.0",
-                "symfony/http-foundation": ">=2.2,<2.3-dev"
+                "psr/log": "~1.0",
+                "symfony/debug": "~2.6",
+                "symfony/event-dispatcher": "~2.5.9|~2.6,>=2.6.2",
+                "symfony/http-foundation": "~2.5,>=2.5.4"
             },
             "require-dev": {
-                "symfony/browser-kit": "2.2.*",
-                "symfony/console": "2.2.*",
-                "symfony/class-loader": ">=2.1,<3.0",
-                "symfony/config": ">=2.0,<3.0",
-                "symfony/dependency-injection": ">=2.0,<3.0",
-                "symfony/finder": ">=2.0,<3.0",
-                "symfony/process": ">=2.0,<3.0",
-                "symfony/routing": ">=2.2,<2.3-dev",
-                "symfony/stopwatch": ">=2.2,<2.3-dev"
+                "symfony/browser-kit": "~2.3",
+                "symfony/class-loader": "~2.1",
+                "symfony/config": "~2.0,>=2.0.5",
+                "symfony/console": "~2.3",
+                "symfony/css-selector": "~2.0,>=2.0.5",
+                "symfony/dependency-injection": "~2.2",
+                "symfony/dom-crawler": "~2.0,>=2.0.5",
+                "symfony/expression-language": "~2.4",
+                "symfony/finder": "~2.0,>=2.0.5",
+                "symfony/process": "~2.0,>=2.0.5",
+                "symfony/routing": "~2.2",
+                "symfony/stopwatch": "~2.3",
+                "symfony/templating": "~2.2",
+                "symfony/translation": "~2.0,>=2.0.5",
+                "symfony/var-dumper": "~2.6"
             },
             "suggest": {
-                "symfony/browser-kit": "2.2.*",
-                "symfony/class-loader": "2.2.*",
-                "symfony/config": "2.2.*",
-                "symfony/console": "2.2.*",
-                "symfony/dependency-injection": "2.2.*",
-                "symfony/finder": "2.2.*"
+                "symfony/browser-kit": "",
+                "symfony/class-loader": "",
+                "symfony/config": "",
+                "symfony/console": "",
+                "symfony/dependency-injection": "",
+                "symfony/finder": "",
+                "symfony/var-dumper": ""
             },
-            "time": "1364035424",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "2.7-dev"
                 }
             },
-            "installation-source": "source",
             "autoload": {
                 "psr-0": {
                     "Symfony\\Component\\HttpKernel\\": ""
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "authors": [
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
                     "name": "Symfony Community",
                     "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "Symfony HttpKernel Component",
-            "homepage": "http://symfony.com"
+            "homepage": "http://symfony.com",
+            "time": "2014-12-25 23:30:25"
         },
         {
             "name": "symfony/routing",
-            "version": "2.2.x-dev",
+            "version": "2.7.x-dev",
             "target-dir": "Symfony/Component/Routing",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Routing.git",
-                "reference": "a8599d5735c5f1f994cfbf91f59851add9c9f627"
+                "reference": "d71d0d748ff9076c7bd4ebef320d303c9e13fffd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Routing/zipball/a8599d5735c5f1f994cfbf91f59851add9c9f627",
-                "reference": "a8599d5735c5f1f994cfbf91f59851add9c9f627",
+                "url": "https://api.github.com/repos/symfony/Routing/zipball/d71d0d748ff9076c7bd4ebef320d303c9e13fffd",
+                "reference": "d71d0d748ff9076c7bd4ebef320d303c9e13fffd",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
             "require-dev": {
-                "psr/log": ">=1.0,<2.0",
-                "doctrine/common": ">=2.2,<3.0",
-                "symfony/config": ">=2.2,<2.3-dev",
-                "symfony/yaml": ">=2.0,<3.0"
+                "doctrine/annotations": "~1.0",
+                "doctrine/common": "~2.2",
+                "psr/log": "~1.0",
+                "symfony/config": "~2.2",
+                "symfony/expression-language": "~2.4",
+                "symfony/http-foundation": "~2.3",
+                "symfony/yaml": "~2.0,>=2.0.5"
             },
             "suggest": {
-                "symfony/config": "2.2.*",
-                "symfony/yaml": "2.2.*",
-                "doctrine/common": "~2.2"
+                "doctrine/annotations": "For using the annotation loader",
+                "symfony/config": "For using the all-in-one router or any loader",
+                "symfony/expression-language": "For using expression matching",
+                "symfony/yaml": "For using the YAML loader"
             },
-            "time": "1363253953",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "2.7-dev"
                 }
             },
-            "installation-source": "source",
             "autoload": {
                 "psr-0": {
                     "Symfony\\Component\\Routing\\": ""
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "authors": [
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
                     "name": "Symfony Community",
                     "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "Symfony Routing Component",
-            "homepage": "http://symfony.com"
+            "homepage": "http://symfony.com",
+            "keywords": [
+                "router",
+                "routing",
+                "uri",
+                "url"
+            ],
+            "time": "2014-12-22 16:45:18"
         }
     ],
-    "packages-dev": null,
-    "aliases": [
-
-    ],
+    "packages-dev": [],
+    "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "silex/silex": 20
-    }
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
 }
