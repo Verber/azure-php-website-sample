@@ -21,7 +21,7 @@ class Blobs {
 
     public function __construct()
     {
-        $connectionString = getenv('BLOB_CONNECTION_STRING');
+        $connectionString = getenv('CUSTOMCONNSTR_STORAGE')?:$_SERVER['CUSTOMCONNSTR_STORAGE'];
         $this->blobStorage = ServicesBuilder::getInstance()->createBlobService($connectionString);
 
         $this->initContainer();

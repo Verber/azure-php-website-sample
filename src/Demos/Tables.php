@@ -25,7 +25,7 @@ class Tables {
 
     public function __construct()
     {
-        $connectionString = $connectionString = isset($_SERVER['CUSTOMCONNSTR_STORAGE'])?$_SERVER['CUSTOMCONNSTR_STORAGE']:getenv('CUSTOMCONNSTR_STORAGE');
+        $connectionString = getenv('CUSTOMCONNSTR_STORAGE')?:$_SERVER['CUSTOMCONNSTR_STORAGE'];
         $this->tableProxy = ServicesBuilder::getInstance()->createTableService($connectionString);
 
         $this->initTable();
