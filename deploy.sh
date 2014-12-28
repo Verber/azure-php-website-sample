@@ -92,7 +92,7 @@ if [[ -n "$POST_DEPLOYMENT_ACTION" ]]; then
   exitWithMessageOnError "post deployment action failed"
 fi
 
-#####################################################
+####################################################
 # Dependency install
 # ----------
 
