@@ -34,7 +34,7 @@
     <?php foreach ($entities as $entity): ?>
     <tr>
         <td><?php echo $entity->getPropertyValue('Job'); ?></td>
-        <td><?php $dt = $entity->getPropertyValue('Due')->format('Y-m-d H:i:s'); ?></td>
+        <td><?php echo $entity->getPropertyValue('Due')->format('Y-m-d H:i:s'); ?></td>
     </tr>
     <?php endforeach; ?>
 </table>
