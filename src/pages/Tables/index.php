@@ -28,8 +28,8 @@
 <table>
     <tr>
         <th>Job</th>
-        <th>Tag</th>
         <th>Due</th>
+        <th>Tag</th>
     </tr>
     <?php foreach ($entities as $entity): ?>
     <tr>
